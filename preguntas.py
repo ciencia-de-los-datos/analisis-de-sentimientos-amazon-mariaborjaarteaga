@@ -99,7 +99,7 @@ def pregunta_04():
     from sklearn.naive_bayes import BernoulliNB
     import numpy as np
     # Cargue las variables.
-    x_train, _, y_train, y_train, y_test = pregunta_02()
+    x_train,y_train, y_train, y_test = pregunta_02()
 
     # Obtenga el analizador de la pregunta 3.
     analyzer = pregunta_03()
@@ -131,7 +131,7 @@ def pregunta_04():
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "alpha": np.arange(0.1,1.0,10),
+        'clf__alpha':list(np.arange(0.1,1.0,10)),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
